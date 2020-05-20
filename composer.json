@@ -20,9 +20,8 @@
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
+        "laragis/core": "*@dev",
         "laravel/framework": "^7.0",
-        "laravel/nova": "*",
-        "laragis/nova": "*@dev",
         "league/flysystem-aws-s3-v3": "^1.0",
         "wikimedia/composer-merge-plugin": "^1.4"
     },
@@ -103,7 +102,7 @@
         },
         {
             "type": "path",
-            "url": "./platform/nova"
+            "url": "./platform/laragis/*"
         }
     ]
 }

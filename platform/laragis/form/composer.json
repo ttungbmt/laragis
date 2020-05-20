@@ -1,0 +1,38 @@
+{
+    "name": "laragis/form",
+    "description": "Form bundle for Laragis.",
+    "keywords": [
+        "laravel",
+        "form"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Truong Thanh Tung",
+            "email": "ttungbmt@gmail.com"
+        }
+    ],
+    "require": {
+        "anahkiasen/former": "^4.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laragis\\Form\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laragis\\Form\\FormServiceProvider"
+            ],
+            "aliases": {
+                "Form": "Laragis\\Form\\Facades\\Form"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

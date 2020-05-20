@@ -4,8 +4,123 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "81aeae565f24440b1ed943bcc9d0f3f5",
+    "content-hash": "cdf802b29f9b885b46f1f3147241b3ae",
     "packages": [
+        {
+            "name": "anahkiasen/former",
+            "version": "4.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/formers/former.git",
+                "reference": "2fcc1f68ca04af39a01e370ed0e2eef132ed5072"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/formers/former/zipball/2fcc1f68ca04af39a01e370ed0e2eef132ed5072",
+                "reference": "2fcc1f68ca04af39a01e370ed0e2eef132ed5072",
+                "shasum": ""
+            },
+            "require": {
+                "anahkiasen/html-object": "~1.4",
+                "illuminate/config": "~5.0|^6.0|^7.0",
+                "illuminate/container": "~5.0|^6.0|^7.0",
+                "illuminate/http": "~5.0|^6.0|^7.0",
+                "illuminate/routing": "~5.0|^6.0|^7.0",
+                "illuminate/session": "~5.0|^6.0|^7.0",
+                "illuminate/support": "~5.0|^6.0|^7.0",
+                "illuminate/translation": "~5.0|^6.0|^7.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "illuminate/database": "~5.0|^6.0|^7.0",
+                "mockery/mockery": "~0.9.1",
+                "phpunit/phpunit": "~4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.1-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Former\\FormerServiceProvider"
+                    ],
+                    "aliases": {
+                        "Former": "Former\\Facades\\Former"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Former\\": [
+                        "src/Former",
+                        "tests"
+                    ],
+                    "Laravel\\": "src/Laravel"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxime Fabre",
+                    "email": "ehtnam6@gmail.com"
+                }
+            ],
+            "description": "A powerful form builder",
+            "homepage": "http://formers.github.io/former/",
+            "keywords": [
+                "bootstrap",
+                "form",
+                "foundation",
+                "laravel"
+            ],
+            "time": "2020-03-04T08:38:36+00:00"
+        },
+        {
+            "name": "anahkiasen/html-object",
+            "version": "1.4.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Anahkiasen/html-object.git",
+                "reference": "45bb54b91112c064d3906c207259d5c8dcba798f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Anahkiasen/html-object/zipball/45bb54b91112c064d3906c207259d5c8dcba798f",
+                "reference": "45bb54b91112c064d3906c207259d5c8dcba798f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "madewithlove/php-cs-fixer-config": "^1.3",
+                "phpunit/phpunit": "^4.8",
+                "phpunit/phpunit-dom-assertions": "^0.1.0",
+                "symfony/css-selector": "^2.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "HtmlObject\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anahkiasen",
+                    "email": "ehtnam6@gmail.com"
+                }
+            ],
+            "description": "A set of classes to create and manipulate HTML objects abstractions",
+            "time": "2017-05-31T07:52:45+00:00"
+        },
         {
             "name": "asm89/stack-cors",
             "version": "1.3.0",
@@ -2867,28 +2982,33 @@
             "time": "2020-04-03T16:01:00+00:00"
         },
         {
-            "name": "laragis/nova",
+            "name": "laragis/core",
             "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "./platform/packages/nova",
-                "reference": "586f117df242ca5ba8d53a66f99f22f94b72b63e"
+                "url": "./platform/laragis/core",
+                "reference": "731b2cb170e32c3005b9769540436cceb94b3e19"
             },
             "require": {
                 "beyondcode/nova-tinker-tool": "^1.1",
                 "bolechen/nova-activitylog": "^0.2.1",
                 "cybercog/laravel-nova-ban": "^1.1",
-                "gregoriohc/laravel-nova-theme-responsive": "^0.8.1"
+                "gregoriohc/laravel-nova-theme-responsive": "^0.8.1",
+                "laragis/form": "*@dev",
+                "laravel/nova": "*"
             },
             "type": "library",
             "extra": {
                 "laravel": {
-                    "providers": []
+                    "providers": [
+                        "Laragis\\Providers\\LaragisServiceProvider",
+                        "App\\Providers\\NovaServiceProvider"
+                    ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Laragis\\Nova\\": "src/"
+                    "Laragis\\": "src/"
                 }
             },
             "license": [
@@ -2900,9 +3020,54 @@
                     "email": "ttungbmt@gmail.com"
                 }
             ],
-            "description": "A wonderful administration interface for Laravel.",
+            "description": "The Laragis Platform based on Laravel Framework.",
             "keywords": [
                 "admin",
+                "laravel"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "laragis/form",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./platform/laragis/form",
+                "reference": "1d17a1787efc758fe5500fbdd5939faeb2f2d1f6"
+            },
+            "require": {
+                "anahkiasen/former": "^4.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laragis\\Form\\FormServiceProvider"
+                    ],
+                    "aliases": {
+                        "Form": "Laragis\\Form\\Facades\\Form"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laragis\\Form\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Truong Thanh Tung",
+                    "email": "ttungbmt@gmail.com"
+                }
+            ],
+            "description": "Form bundle for Laragis.",
+            "keywords": [
+                "form",
                 "laravel"
             ],
             "transport-options": {
@@ -3067,7 +3232,7 @@
             "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "./platform/nova",
+                "url": "./platform/laragis/nova",
                 "reference": "c3b875c3d472526bc117b998e0ab2d4d4bb806e3"
             },
             "require": {
@@ -12168,7 +12333,7 @@
         "botble/plugin-management": 20,
         "botble/shortcode": 20,
         "botble/theme": 20,
-        "laragis/nova": 20,
+        "laragis/core": 20,
         "botble/dev-tool": 20,
         "botble/plugin-generator": 20,
         "botble/theme-generator": 20,

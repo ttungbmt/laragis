@@ -1,6 +1,6 @@
 {
-    "name": "laragis/nova",
-    "description": "A wonderful administration interface for Laravel.",
+    "name": "laragis/core",
+    "description": "The Laragis Platform based on Laravel Framework.",
     "keywords": [
         "laravel",
         "admin"
@@ -13,6 +13,8 @@
         }
     ],
     "require": {
+        "laravel/nova": "*",
+        "laragis/form": "*@dev",
         "gregoriohc/laravel-nova-theme-responsive": "^0.8.1",
         "beyondcode/nova-tinker-tool": "^1.1",
         "bolechen/nova-activitylog": "^0.2.1",
@@ -23,12 +25,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Laragis\\Nova\\": "src/"
+            "Laragis\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
+                "App\\Providers\\NovaServiceProvider",
+                "Laragis\\Providers\\LaragisServiceProvider"
             ]
         }
     },

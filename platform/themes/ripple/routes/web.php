@@ -5,7 +5,11 @@ Theme::routes();
 Route::group(['namespace' => 'Theme\Ripple\Http\Controllers', 'middleware' => 'web'], function () {
     Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function () {
 
-        Route::get('/', 'RippleController@getIndex')->name('public.index');
+        Route::get('/', function () {
+            return view('welcome');
+        });
+
+//        Route::get('/', 'RippleController@getIndex')->name('public.index');
 
         Route::get('sitemap.xml', [
             'as'   => 'public.sitemap',
