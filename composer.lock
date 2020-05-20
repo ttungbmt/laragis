@@ -2987,7 +2987,7 @@
             "dist": {
                 "type": "path",
                 "url": "./platform/laragis/core",
-                "reference": "731b2cb170e32c3005b9769540436cceb94b3e19"
+                "reference": "36fcb743124c76bfb2ab731340eb7233499b8183"
             },
             "require": {
                 "beyondcode/nova-tinker-tool": "^1.1",
@@ -3001,8 +3001,8 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Laragis\\Providers\\LaragisServiceProvider",
-                        "App\\Providers\\NovaServiceProvider"
+                        "App\\Providers\\NovaServiceProvider",
+                        "Laragis\\Providers\\LaragisServiceProvider"
                     ]
                 }
             },
