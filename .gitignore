@@ -15,6 +15,7 @@ npm-debug.log
 sftp-config.json
 .phpstorm.meta.php
 _ide_helper_models.php
+/storage/debugbar
 /storage/app/backup
 /storage/cache_keys.json
 /storage/languages.json
@@ -38,3 +39,4 @@ resources/docs
 /storage/.license
 
 /log
+storage/debugbar/
