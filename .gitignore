@@ -20,8 +20,6 @@ _ide_helper_models.php
 /storage/cache_keys.json
 /storage/languages.json
 
-public/vendor/core
-
 _ide_helper.php
 package-lock.json
 /.sass-cache
