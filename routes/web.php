@@ -13,3 +13,7 @@
 
 $novaPath = config('nova.path');
 Route::redirect($novaPath, $novaPath.'/dashboards/main');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

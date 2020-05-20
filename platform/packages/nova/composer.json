@@ -1,0 +1,40 @@
+{
+    "name": "laragis/nova",
+    "description": "A wonderful administration interface for Laravel.",
+    "keywords": [
+        "laravel",
+        "admin"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Truong Thanh Tung",
+            "email": "ttungbmt@gmail.com"
+        }
+    ],
+    "require": {
+        "gregoriohc/laravel-nova-theme-responsive": "^0.8.1",
+        "beyondcode/nova-tinker-tool": "^1.1",
+        "bolechen/nova-activitylog": "^0.2.1",
+        "cybercog/laravel-nova-ban": "^1.1"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Laragis\\Nova\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

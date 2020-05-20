@@ -30,10 +30,10 @@ class ThemeServiceProvider extends ServiceProvider
          */
         $router = $this->app['router'];
 
-        $path = request()->path();
-        if(!Str::of($path)->startsWith(config('nova.path')) && !Str::of($path)->startsWith('admin')){
-            $router->pushMiddlewareToGroup('web', AdminBarMiddleware::class);
-        }
+//        $path = request()->path();
+//        if(!Str::of($path)->startsWith(config('nova.path')) && !Str::of($path)->startsWith('admin')){
+//            $router->pushMiddlewareToGroup('web', AdminBarMiddleware::class);
+//        }
 
         Helper::autoload(__DIR__ . '/../../helpers');
 
