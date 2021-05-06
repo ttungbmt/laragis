@@ -30,7 +30,7 @@
         "bootstrap-vue": "^2.13.1",
         "cropper": "^0.7.9",
         "moment": "^2.25.3",
-        "sanitize-html": "^1.23.0",
+        "sanitize-html": "^2.3.2",
         "toastr": "^2.1.4",
         "vue-template-compiler": "^2.6.11"
     }
